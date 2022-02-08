@@ -58,13 +58,27 @@
       }
       p > a:hover { text-shadow: 0 0 6px #216f79; }
       p img { vertical-align: bottom; }
+      .button{
+       border: 1px solid transparent;
+    background-color: #35D461;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+    padding: 18px 22px;
+    border-radius: 7px;
+    transition: 0.3s ease;
+    text-align: center;  
+      }
    </style>
    <body>
       <div class="wrapper">
          <div class="box">
             <h1>::CLOUDFLARE_ERROR_500S_BOX::</h1>
             <p>Sorry, it's me, not you. If you facing 520 you can click below button to clear your cookies and hopefully you will be fine.</p>
-            <button onclick="deleteAllCookies()" class="clearCookiesButton"> Clear Cookies </button>
+            <button onclick="deleteAllCookies()" class="button"> Clear Cookies </button>
             <p>&#58;&#40;</p>
             <p><a href="/">Let me try again!</a></p>
          </div>
