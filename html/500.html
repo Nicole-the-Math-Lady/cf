@@ -63,10 +63,22 @@
       <div class="wrapper">
          <div class="box">
             <h1>::CLOUDFLARE_ERROR_500S_BOX::</h1>
-            <p>Sorry, it's me, not you. If you facing 520 you can click here to clear your cookies and hopefully you will be fine.</p>
+            <p>Sorry, it's me, not you. If you facing 520 you can click below button to clear your cookies and hopefully you will be fine.</p>
+            <button onclick="deleteAllCookies()" class="clearCookiesButton"> Clear Cookies </button>
             <p>&#58;&#40;</p>
             <p><a href="/">Let me try again!</a></p>
          </div>
       </div>
+      <script>
+         function deleteAllCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i];
+          var eqPos = cookie.indexOf("=");
+          var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+          document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+      }   
+      </script>
    </body>
 </html>
